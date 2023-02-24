@@ -1,1 +1,22 @@
-<p>star-wars works!</p>
+<table class="table table-hover table-striped">
+  <thead>
+    <td>#</td>
+    <td>Nome: </td>
+    <td>Habilidade: </td>
+    <td>Planeta: </td>
+    <td>Armas: </td>
+    <td>Avatar: </td>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let personagem of personagens">
+      <td>{{ personagem.id }}</td>
+      <td>{{ personagem.nome }}</td>
+      <td>{{ personagem.habilidade }}</td>
+      <td>{{ personagem.planeta }}</td>
+      <td>{{ personagem.armas }}</td>
+      <td>{{ personagem.avatar }}</td>
+    </tr>
+  </tbody>
+
+ 
