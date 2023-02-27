@@ -17,4 +17,21 @@ export class StarWarsComponent implements OnInit {
       this.personagens = result;
     });
   }
+
+  public obterTodosPersonagens() {
+    this._personagemService.getPersonagens().subscribe((retorno) => {
+      this.personagens = retorno.map((personagem) => {
+        return new PersonagemClass(
+          personagem.id,
+          personagem.nome,
+          personagem.habilidade,
+          personagem.planeta,
+          personagem.armas,
+          personagem.avatar
+        );
+      });
+    });
+  }
+
+  public remover() {}
 }
